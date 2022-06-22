@@ -1,22 +1,89 @@
 .container {
-  width: 90vw;
+  width: 80vw;
   height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.repo {
+  width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow-x: hidden;
-  overflow-y: visible;
-  border: 3px solid black;
-  border-radius: 10px;
+  overflow-y: hidden;
+  padding: 20px;
+  background-color: lightblue;
+}
+
+.list {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-left: 3px solid black;
   padding: 20px;
 }
 
 .row {
-  width: 50%;
-  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 40%;
   margin-top: 10px;
   margin-bottom: 10px;
   border: 1px solid black;
+  border-radius: 5px;
   min-height: 0;
+}
+
+.text {
+  font-size: large;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.input{
+  display: flex;
+  width: 30%;
+  height: 5%;
+  margin: 3px;
+  text-align: center;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: 1px solid black;
+  text-decoration: none;
+  outline: none;
+}
+
+.btn {
+  display: flex;
+  margin-top: 20px;
+  width: 20%;
+  height: 5%;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  transition: 0.3s all ease;
+}
+
+.btn:hover {
+  color: green;
+  border: 2px solid green;
 }

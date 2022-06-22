@@ -6,8 +6,9 @@ import { AxiosResponse } from 'axios'
 export class GitHubService {
   constructor(private readonly httpService: HttpService) {}
 
-  getHistory(): Promise<AxiosResponse<any>> {
-    let response = this.httpService.axiosRef.get('https://api.github.com/repos/ebolzico/fulltimeforce2/commits')
+  getHistory(body: object): Promise<AxiosResponse<any>> {
+    const {author, repo}: any = body
+    let response = this.httpService.axiosRef.get(`https://api.github.com/repos/${author}/${repo}/commits`)
     return response
   }
 }
