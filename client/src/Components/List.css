@@ -4,14 +4,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid black;
+  border: 3px solid lightblue;
   border-radius: 10px;
+  box-shadow: 10px 10px 10px 10px;
 }
 
 .repo {
+  display: flex;
+  position: sticky;
   width: 50%;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -19,15 +21,17 @@
 }
 
 .list {
-  width: 50%;
-  height: 100%;
   display: flex;
-  justify-content: center;
+  width: 50%;
+  height: 90vh;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  overflow-x: hidden;
   overflow-y: auto;
   border-left: 3px solid black;
+  border-radius: 10px;
+  background-image: url(../../public/keyboard.jpeg);
+  background-size: cover;
 }
 
 .row {
@@ -36,18 +40,17 @@
   justify-content: center;
   align-items: center;
   width: 40%;
-  height: 10vh;
+  height: 80%;
   margin-top: 1vh;
   margin-bottom: 1vh;
-  border: 1px solid black;
+  border: 1px solid lightblue;
   border-radius: 5px;
-  min-height: 0;
+  background-color: lightblue;
 }
 
 .text {
-  font-size: small;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  font-size: 12px;
+  margin: 2px;
 }
 
 .input{
@@ -80,4 +83,70 @@
 .btn:hover {
   color: green;
   border: 2px solid green;
+}
+
+@media screen and (max-width: 980px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .repo {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightblue;
+  }
+
+  .list {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-top: 3px solid black;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    background-color: lightblue;
+  }
+
+  .btn {
+    display: flex;
+    margin-top: 20px;
+    width: 30%;
+    height: 5%;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    transition: 0.3s all ease;
+  }
+
 }
