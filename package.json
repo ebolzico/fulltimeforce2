@@ -1,0 +1,11 @@
+
+{
+  "scripts": {
+    "api": "cd api && npm run start",
+    "client": "cd client && npm start",
+    "start": "npm run api & npm run client",
+    "install-api": "cd api && npm i",
+    "install-client": "cd client && npm i",
+    "install": "npm run install-api && npm run install-client"
+  }
+}
